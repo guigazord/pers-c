@@ -26,7 +26,7 @@ int main() {
   } else if (num_deer > 0 && num_deer <= 5) {
     printf ("I think %i deers are just enough.", num_deer);
   } else {
-    printf ("Holy Cow! This wilderness is unstoppable!");
+    printf ("Holy Cow! This wilderness is huge!");
   }
 
   getchar();
