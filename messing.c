@@ -30,6 +30,7 @@ int main() {
   }
 
   getchar();
+  printf("Bye bye...");
 
   return 0;   //program successfully ('0') finished
 }
