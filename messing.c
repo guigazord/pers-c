@@ -7,7 +7,7 @@ int main() {
 
   //basic input and outputs and variable functioning
 
-  printf("Hello hunter!\nFor a better experience press win+left or win+right to colapse the window!\n");   //prints welcoming to the screen
+  printf("Win+left or win+right to colapse the window!\n\nHello hunter!\n");   //prints welcoming to the screen
   getchar();
   printf("How many bunnies do you see? ");   //prints instruction to the screen
   scanf("%i", &num_bunny);   //scans input as digit; stores in variable
@@ -15,7 +15,9 @@ int main() {
   //if else statements
   if (num_bunny == 0) {
     printf ("Somebody's not going to eat today...");   //outputs string with input
-  } else if (num_bunny > 0 && num_bunny <= 10) {
+  } else if (num_bunny == 1){
+    printf ("%i bunny guy chilling under a tree...", num_bunny);
+  } else if (num_bunny > 1 && num_bunny <= 10) {
     printf ("%i little bunnies jumping on the grove.", num_bunny);   //outputs string with input
   } else {
     printf ("Wow!!! These damn bunnies spread soo quickly!");
@@ -27,6 +29,8 @@ int main() {
 
   if (num_deer == 0) {
     printf ("These are hard times...");
+  } else if (num_deer == 1) {
+    printf ("%i single deer, oh oh.", num_deer);
   } else if (num_deer > 0 && num_deer <= 5) {
     printf ("I think %i deers are just enough.", num_deer);
   } else {
@@ -51,7 +55,7 @@ int main() {
   }
 
   num_total = (num_bunny + num_deer);
-  printf("\nThat escalated quickly! %i animals in the jungle!", num_total);
+  printf("\n%i animals in the jungle!", num_total);
 
   return 0;   //program successfully ('0') finished
 }
