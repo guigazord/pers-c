@@ -7,7 +7,8 @@ int main() {
 
   //basic input and outputs and variable functioning
 
-  printf("Hello hunter!\n");   //prints welcoming to the screen
+  printf("Hello hunter!\nFor a better experience press win+left or win+right to colapse the window!\n");   //prints welcoming to the screen
+  getchar();
   printf("How many bunnies do you see? ");   //prints instruction to the screen
   scanf("%i", &num_bunny);   //scans input as digit; stores in variable
 
@@ -21,7 +22,7 @@ int main() {
   }
 
   getchar();   //waits non specified character input
-  printf ("\nAnd how many deers do you see? ");
+  printf ("\n\nAnd how many deers do you see? ");
   scanf ("%i", &num_deer);
 
   if (num_deer == 0) {
@@ -32,6 +33,8 @@ int main() {
     printf ("Holy Cow! This wilderness is huge!");
   }
 
+  getchar();
+  printf("\n\nLets count the total amount of animals together!");
   getchar();
   printf("\nTotal of bunnies:\n");
 
