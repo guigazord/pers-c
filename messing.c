@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 //variables section
-int num_bunny, num_deer, num_total;       //declaration of integer var 'x'
+int num_bunny, num_deer, num_total, num_prey;       //declaration of integer var 'x'
 
 int main() {
 
   //basic input and outputs and variable functioning
 
-  printf("Win+left or win+right to colapse the window!\n\nHello hunter!\n");   //prints welcoming to the screen
+  printf ("Win+left or win+right to colapse the window!\n\nHello hunter!\n");   //prints welcoming to the screen
   getchar();
-  printf("How many bunnies do you see? ");   //prints instruction to the screen
-  scanf("%i", &num_bunny);   //scans input as digit; stores in variable
+  printf ("How many bunnies do you see? ");   //prints instruction to the screen
+  scanf ("%i", &num_bunny);   //scans input as digit; stores in variable
 
   //if else statements
   if (num_bunny == 0) {
@@ -38,9 +38,9 @@ int main() {
   }
 
   getchar();
-  printf("\n\nLets count the total amount of animals together!");
+  printf ("\n\nLets count the total amount of animals together!");
   getchar();
-  printf("\nTotal of bunnies:\n");
+  printf ("\nTotal of bunnies:\n");
 
   //for loops
   for (int wai = 1; wai <= num_bunny; wai++) {
@@ -48,14 +48,38 @@ int main() {
   }
 
   getchar();
-  printf("Total of deers:\n");
+  printf ("Total of deers:\n");
 
   for (int jay = 1; jay <= num_deer; jay++) {
-    printf("%i\n", jay);
+    printf ("%i\n", jay);
   }
 
   num_total = (num_bunny + num_deer);
-  printf("\n%i animals in the jungle!", num_total);
+  printf ("\n%i animals in the jungle!", num_total);
+
+  //while loop
+  printf ("\n\nOk, now please, tell us how many preys you'll hunt today hunter? ");
+  scanf ("%d", &num_prey);
+
+  if (num_prey == 0) {
+    while (num_prey == 0) {
+      printf ("You have to hunt at least one animal... Try again: \n");
+      scanf ("%d", &num_prey);
+    }
+  } else if (num_prey == 1) {
+    printf ("Yep, %d prey feels just fine...", num_prey);
+  } else if (num_prey > 1 && num_prey <= num_total) {
+    printf ("Hmm, seems like we're having a feast tonight with these %d hunts!", num_prey);
+  } else {
+    printf ("Oops, seems like %d preys is more than the total animals.\n", num_prey);
+    while (num_prey > num_total) {
+      printf ("Make shure you are not exceeding the number of animals, try again: ");
+      scanf ("%d", &num_prey);
+    }
+  }
+
+  getchar();
+
 
   return 0;   //program successfully ('0') finished
 }
