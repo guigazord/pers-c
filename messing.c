@@ -7,9 +7,9 @@ int main() {
 
   //basic input and outputs and variable functioning
 
-  printf ("Win+left or win+right to colapse the window!\n\nHello hunter!\n");   //prints welcoming to the screen
+  printf ("Hunter Simulator v1.1\n\nWin+left or win+right to colapse the window!\n\nHello hunter! (enter to continue)");   //prints welcoming to the screen
   getchar();
-  printf ("How many bunnies do you see? ");   //prints instruction to the screen
+  printf ("\nHow many bunnies do you see? (enter a positive integer number) ");   //prints instruction to the screen
   scanf ("%i", &num_bunny);   //scans input as digit; stores in variable
 
   //if else statements
@@ -24,7 +24,7 @@ int main() {
   }
 
   getchar();   //waits non specified character input
-  printf ("\n\nAnd how many deers do you see? ");
+  printf ("\n\nAnd how many deers do you see? (enter a positive integer number) ");
   scanf ("%i", &num_deer);
 
   if (num_deer == 0) {
@@ -38,17 +38,18 @@ int main() {
   }
 
   getchar();
-  printf ("\n\nLets count the total amount of animals together!");
+  printf ("\n\nLets count the total amount of animals together! (enter to continue)");
   getchar();
-  printf ("\nTotal of bunnies:\n");
+  printf ("\nNumber of bunnies:\n");
 
   //for loops
   for (int wai = 1; wai <= num_bunny; wai++) {
     printf ("%i\n", wai);
   }
 
+  printf("\n(enter to continue)");
   getchar();
-  printf ("Total of deers:\n");
+  printf ("\nNumber of deers:\n");
 
   for (int jay = 1; jay <= num_deer; jay++) {
     printf ("%i\n", jay);
