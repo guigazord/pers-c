@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 //variables section
-int num_bunny, num_deer, num_total, num_prey;       //declaration of integer var 'x'
+int num_bunny, num_deer, num_total,
+    num_prey, num_coin;
 
 int main() {
 
@@ -69,19 +70,34 @@ int main() {
       printf ("\nYou have to hunt at least one animal...\nTry again: ");
       scanf ("%d", &num_prey);
     }
-    printf("\nNice! Now we can now make some meal!");
+    printf("\nNice! Now we can now make some money!");
   } else if (num_prey == 1) {
     printf ("\nYep, %d prey feels just fine...", num_prey);
   } else if (num_prey > 1 && num_prey <= num_total) {
-    printf ("\nHmm, seems like we're having a feast tonight with these %d hunts!", num_prey);
+    printf ("\nHmm, seems like we're profiting tonight with these %d hunts!", num_prey);
   } else {
     while (num_prey > num_total) {
       printf ("\nMake shure you are not exceeding the number of animals.\nTry again: ");
       scanf ("%d", &num_prey);
     }
-    printf("\nNice! Now we can now make some meal!");
+    printf("\nNice! Now we can now make some money!");
   }
 
+  getchar();
+
+  //do while
+  printf ( "\n\nOk, we have the meat, now lets count how many coins we'll earn\n"
+          "selling it to the natives! (enter to continue)" );
+  getchar();
+
+  int wae = 1, num_coin = 10;
+  do {
+    printf("\n%d meat, %d coins!", wae, num_coin);
+    wae += 1;
+    num_coin += 10;
+  } while (wae <= num_prey);
+
+  printf ("");
   getchar();
 
   return 0;   //program successfully ('0') finished
