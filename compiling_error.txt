@@ -1,4 +1,0 @@
-C:\Users\asus\Desktop\work\project-learn-c\messing.c: In function 'main':
-C:\Users\asus\Desktop\work\project-learn-c\messing.c:73:6: error: continue statement not within a loop
-     {continue;}
-      ^

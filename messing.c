@@ -97,7 +97,17 @@ int main() {
     num_coin += 10;
   } while (wae <= num_prey);
 
-  printf ("");
+  printf ("\n\n");
+
+  //ending of program
+  if (num_coin <= 30) {
+    printf ("Bad sellings... Game over.");
+  } else if (num_coin > 30 && num_coin < 100) {
+    printf ("Average sellings. Keep it up!");
+  } else {
+    printf ("Congratulations! You won the game!!!");
+  }
+
   getchar();
 
   return 0;   //program successfully ('0') finished
