@@ -59,14 +59,16 @@ int main() {
   printf ("\n%i animals in the jungle!", num_total);
 
   //while loop
-  printf ("\n\nOk, now please, tell us how many preys you'll hunt today hunter? ");
+  printf ("\n\nOk, now please, tell us how many preys you'll hunt today hunter?\n(enter a positive integer number) ");
   scanf ("%d", &num_prey);
+  printf("\n");
 
   if (num_prey == 0) {
     while (num_prey == 0) {
       printf ("You have to hunt at least one animal... Try again: \n");
       scanf ("%d", &num_prey);
     }
+    printf("Nice. With these hunt we can now make some meal!");
   } else if (num_prey == 1) {
     printf ("Yep, %d prey feels just fine...", num_prey);
   } else if (num_prey > 1 && num_prey <= num_total) {
@@ -77,10 +79,10 @@ int main() {
       printf ("Make shure you are not exceeding the number of animals, try again: ");
       scanf ("%d", &num_prey);
     }
+    printf("Nice. With these hunt we can now make some meal!");
   }
 
   getchar();
-
 
   return 0;   //program successfully ('0') finished
 }
