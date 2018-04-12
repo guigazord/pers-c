@@ -7,8 +7,10 @@ int main() {
 
   //basic input and outputs and variable functioning
 
-  printf ("Hunter Simulator v1.1\n\nWin+left or win+right to colapse the window!\n\nHello hunter! (enter to continue)");   //prints welcoming to the screen
+  printf ("Hunter simulator v.1.0\n\nWin+left or win+right to colapse the window!\n\n"
+          "+---+---+---+---+---+---+---+---+---+\n\nHello hunter! (enter to continue)");   //prints welcoming to the screen
   getchar();
+
   printf ("\nHow many bunnies do you see? (enter a positive integer number) ");   //prints instruction to the screen
   scanf ("%i", &num_bunny);   //scans input as digit; stores in variable
 
@@ -59,27 +61,25 @@ int main() {
   printf ("\n%i animals in the jungle!", num_total);
 
   //while loop
-  printf ("\n\nOk, now please, tell us how many preys you'll hunt today hunter?\n(enter a positive integer number) ");
+  printf ("\n\nOk, how many preys you'll hunt today?\n(enter a positive integer number) ");
   scanf ("%d", &num_prey);
-  printf("\n");
 
   if (num_prey == 0) {
     while (num_prey == 0) {
-      printf ("You have to hunt at least one animal... Try again: \n");
+      printf ("\nYou have to hunt at least one animal...\nTry again: ");
       scanf ("%d", &num_prey);
     }
-    printf("Nice. With these hunt we can now make some meal!");
+    printf("\nNice! Now we can now make some meal!");
   } else if (num_prey == 1) {
-    printf ("Yep, %d prey feels just fine...", num_prey);
+    printf ("\nYep, %d prey feels just fine...", num_prey);
   } else if (num_prey > 1 && num_prey <= num_total) {
-    printf ("Hmm, seems like we're having a feast tonight with these %d hunts!", num_prey);
+    printf ("\nHmm, seems like we're having a feast tonight with these %d hunts!", num_prey);
   } else {
-    printf ("Oops, seems like %d preys is more than the total animals.\n", num_prey);
     while (num_prey > num_total) {
-      printf ("Make shure you are not exceeding the number of animals, try again: ");
+      printf ("\nMake shure you are not exceeding the number of animals.\nTry again: ");
       scanf ("%d", &num_prey);
     }
-    printf("Nice. With these hunt we can now make some meal!");
+    printf("\nNice! Now we can now make some meal!");
   }
 
   getchar();
